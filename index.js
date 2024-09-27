@@ -14,7 +14,7 @@ async function get_file_content(filePath) {
 }
 
 app.get("/", async (req, res) => {
-    res.json({"test":"test"});
+    res.send(get_file_content(process.cwd()+"/public/main.html"));
 });
 
 const PORT = 80;
