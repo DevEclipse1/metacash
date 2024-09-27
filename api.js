@@ -17,7 +17,7 @@ app.get("/", async (req, res) => {
     res.json({"test":"test"});
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = 80;
 app.listen(PORT, (err) => {
     if (err) {
         console.error("Server error:", err);
