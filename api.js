@@ -14,8 +14,7 @@ async function get_file_content(filePath) {
 }
 
 app.get("/", async (req, res) => {
-    const fileContent = await get_file_content(path.join(process.cwd(), "main.html"));
-    res.type("html").send(fileContent);
+    res.json({"test":"test"});
 });
 
 const PORT = process.env.PORT || 3000;
