@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/DevEclipse1/metacash/issues"
   },
-  "homepage": "https://github.com/DevEclipse1/metacash#readme"
+  "homepage": "https://github.com/DevEclipse1/metacash#readme",
+  "dependencies": {
+    "express": "^4.21.0"
+  }
 }
