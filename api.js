@@ -17,7 +17,7 @@ async function get_file_content(path, filename)
 }
 
 app.get("/", async (req, res) => {
-    res.type("html").send(get_file_content(process.cwd()+"/public/", "main.html"));
+    res.type("html").send(get_file_content(process.cwd(), "main.html"));
 });
 
 const PORT = 80;
