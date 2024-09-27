@@ -2,9 +2,13 @@
   "name": "metacash",
   "version": "1.0.0",
   "description": "an opensource payment platform like paypal",
-  "main": "api.js",
+  "main": "index.js",
+  "engines":{
+    "node":"20.x"
+  },
   "scripts": {
-    "test": "npm -v"
+    "test": "npm -v",
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
