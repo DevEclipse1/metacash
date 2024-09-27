@@ -1,26 +1,24 @@
-const fs = require("node:fs")
-
+const fs = require("node:fs");
+const path = require("path");
 const express = require("express");
 const app = express();
 app.use(express.json());
 
-async function get_file_content(path, filename)
-{
-    const filePath = path.join(path, filename);
-
+async function get_file_content(filePath) {
     try {
         const file = await fs.promises.readFile(filePath, 'utf8');
         return file;
     } catch (err) {
-        return "FAILED TO READ FILE " + filename;
+        return "FAILED TO READ FILE";
     }
 }
 
 app.get("/", async (req, res) => {
-    res.type("html").send(get_file_content(process.cwd(), "main.html"));
+    const fileContent = await get_file_content(path.join(process.cwd(), "main.html"));
+    res.type("html").send(fileContent);
 });
 
-const PORT = 80;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, (err) => {
     if (err) {
         console.error("Server error:", err);
