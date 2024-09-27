@@ -1,0 +1,22 @@
+{
+  "name": "metacash",
+  "version": "1.0.0",
+  "description": "an opensource payment platform like paypal",
+  "main": "api.js",
+  "scripts": {
+    "test": "npm -v"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevEclipse1/metacash.git"
+  },
+  "keywords": [
+    "metacash"
+  ],
+  "author": "DevEclipse1",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/DevEclipse1/metacash/issues"
+  },
+  "homepage": "https://github.com/DevEclipse1/metacash#readme"
+}
